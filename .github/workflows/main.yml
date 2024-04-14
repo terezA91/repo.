@@ -1,1 +1,27 @@
+name: Upload on Nexus
 
+on: 
+    push:
+        branches: 
+            - main
+
+jobs:
+    first-job:
+        name: build
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v4.1.1
+
+            - name: Upload file on Nexus
+              uses: sonatype-nexus-community/nexus-repo-github-action@1.0.0
+              with:
+                serverUrl: https://8cd1-46-162-197-47.ngrok-free.app
+                username: ${{ secrets.NEXUS_USERNAME }}
+                password: ${{ secrets.NEXUS_PASSWORD }}
+                format: raw
+                repository: for-git-repo
+                coordinates: directory=test
+                assets: filename=README.md
+                filename: /README.md
