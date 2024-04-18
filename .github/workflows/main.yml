@@ -22,6 +22,6 @@ jobs:
                 password: ${{ secrets.NEXUS_PASSWORD }}
                 format: maven2
                 repository: for-git-repo
-                coordinates: directory=test
+                coordinates: directory=test.
                 assets: filename=README.md
                 filename: /README.md
