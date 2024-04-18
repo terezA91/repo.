@@ -29,6 +29,6 @@ jobs:
                 format: raw
                 repository: for-git-repo
                 coordinates: groupId=com.example artifactId=app version=1.0.0
-                assets: filename=README.md
-                filename: /README.md
+                assets: extension=txt
+                filename: ./.github/workflows/file.txt
             
