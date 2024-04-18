@@ -5,6 +5,9 @@ on:
         branches: 
             - main
 
+env:
+    M_VAR: some-folder
+
 jobs:
     first-job:
         name: build
@@ -12,10 +15,10 @@ jobs:
 
         steps:
             - name: Checkout
-              uses: actions/checkout@v4.1.1
-              env :
-                M_VAR: some-folder
-            - run : echo "$M_VAR" 
+              uses: actions/checkout@v4.1.1 
+
+            - name: Print value of M_VAR
+              run : echo $M_VAR  
        
             - name: Upload file on Nexus
               uses: sonatype-nexus-community/nexus-repo-github-action@1.0.0
