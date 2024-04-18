@@ -26,6 +26,7 @@ jobs:
                 password   : ${{ secrets.NEXUS_PASSWORD }}
                 format     : maven2
                 repository : maven-releases
+                if: github.event_name == "push"
                 coordinates: groupId=${{ env.M_VAR }} artifactId=.github version=workflows
                 assets     : extension=yml
                 filename   : .github/workflows/prerelease.yml
