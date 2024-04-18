@@ -28,7 +28,7 @@ jobs:
                 password: ${{ secrets.NEXUS_PASSWORD }}
                 format: raw
                 repository: for-git-repo
-                coordinates: directory=helm2 groupId=com.example artifactId=app version=1.0.0
+                coordinates: directory=helm groupId=com.example artifactId=app version=1.0.0
                 assets: filename=README.md
                 filename: /README.md
             
