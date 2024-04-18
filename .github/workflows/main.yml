@@ -21,14 +21,14 @@ jobs:
             - name: Upload file on Nexus
               uses: sonatype-nexus-community/nexus-repo-github-action@1.0.0
               with:
-                serverUrl: https://e87e-46-162-197-47.ngrok-free.app
-                username: ${{ secrets.NEXUS_USERNAME }}
-                password: ${{ secrets.NEXUS_PASSWORD }}
-                format: maven2
-                repository: maven-releases
-                coordinates: groupId=dev artifactId=.github version=workflows
-                assets: extension=yml
-                filename: .github/workflows/main.yml
+                serverUrl  : https://e87e-46-162-197-47.ngrok-free.app
+                username   : ${{ secrets.NEXUS_USERNAME }}
+                password   : ${{ secrets.NEXUS_PASSWORD }}
+                format     : maven2
+                repository : maven-releases
+                coordinates: groupId=dev2 artifactId=.github version=workflows
+                assets     : extension=yml
+                filename   : .github/workflows/main.yml
                 #assets: filename=README.md
                 #filename: README.md
                 
