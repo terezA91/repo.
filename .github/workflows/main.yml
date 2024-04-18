@@ -28,7 +28,7 @@ jobs:
                 password: ${{ secrets.NEXUS_PASSWORD }}
                 format: maven2
                 repository: maven-releases
-                coordinates: directory=helm groupId=com.example artifactId=app version=1.0.0
+                coordinates: groupId=dir1.dir2 artifactId=app version=1.0.0
                 assets: extension=txt
                 filename: ./.github/workflows/hel.txt
             
