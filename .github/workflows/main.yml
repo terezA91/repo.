@@ -22,6 +22,6 @@ jobs:
                 password: ${{ secrets.NEXUS_PASSWORD }}
                 format: raw
                 repository: for-git-repo
-                coordinates: directory=test, directory=nested
+                coordinates: directory=test && directory=nested
                 assets: filename=README.md
                 filename: /README.md
