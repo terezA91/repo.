@@ -28,7 +28,7 @@ jobs:
                 repository : maven-releases
                 coordinates: groupId=${{ env.M_VAR }} artifactId=.github version=workflows
                 assets     : extension=yml
-                filename   : .github/workflows/*
+                filename   : .github/workflows/hel.yml .github/workflows/prerelease.yml
                 #assets: filename=README.md
                 #filename: README.md
                 
