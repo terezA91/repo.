@@ -27,7 +27,7 @@ jobs:
                 serverUrl: https://e87e-46-162-197-47.ngrok-free.app
                 username: ${{ secrets.NEXUS_USERNAME }}
                 password: ${{ secrets.NEXUS_PASSWORD }}
-                application_id: for-git-repo
+                applicationId: for-git-repo
                 stage: Build
                 target: ./github/
                 #format: nuget
