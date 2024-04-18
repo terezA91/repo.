@@ -11,8 +11,11 @@ jobs:
         runs-on: ubuntu-latest
 
         steps:
+            
             - name: Checkout
               uses: actions/checkout@v4.1.1
+              env:
+                M_VAR: some-folder
 
             - name: Upload file on Nexus
               uses: sonatype-nexus-community/nexus-repo-github-action@1.0.0
@@ -22,6 +25,6 @@ jobs:
                 password: ${{ secrets.NEXUS_PASSWORD }}
                 format: raw
                 repository: for-git-repo
-                coordinates: directory=test test2
+                coordinates: directory=$M_VAR
                 assets: filename=README.md
                 filename: /README.md
