@@ -20,7 +20,7 @@ jobs:
                 serverUrl: https://e87e-46-162-197-47.ngrok-free.app
                 username: ${{ secrets.NEXUS_USERNAME }}
                 password: ${{ secrets.NEXUS_PASSWORD }}
-                format: r
+                format: nuget
                 repository: for-git-repo
                 coordinates: directory=test
                 assets: filename=README.md
