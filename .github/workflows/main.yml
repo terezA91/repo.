@@ -28,7 +28,7 @@ jobs:
                 password: ${{ secrets.NEXUS_PASSWORD }}
                 format: maven2
                 repository: maven-releases
-                coordinates: groupId=.github artifactId=workflows
+                coordinates: groupId=.github artifactId=workflows version=1.0.0
                 assets: extension=yml
                 filename: .github/workflows/main.yml
                 #assets: filename=README.md
