@@ -17,10 +17,10 @@ jobs:
             - name: Upload file on Nexus
               uses: sonatype-nexus-community/nexus-repo-github-action@1.0.0
               with:
-                serverUrl: https://8cd1-46-162-197-47.ngrok-free.app
+                serverUrl: https://e87e-46-162-197-47.ngrok-free.app
                 username: ${{ secrets.NEXUS_USERNAME }}
                 password: ${{ secrets.NEXUS_PASSWORD }}
-                format: raw
+                format: r
                 repository: for-git-repo
                 coordinates: directory=test
                 assets: filename=README.md
