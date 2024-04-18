@@ -14,7 +14,7 @@ jobs:
             - name: Checkout
               uses: actions/checkout@v4.1.1
               env :
-                M_VAR: some-folder
+                M_VAR: "some-folder"
             - run : echo $M_VAR 
        
             - name: Upload file on Nexus
