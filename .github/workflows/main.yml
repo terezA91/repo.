@@ -27,7 +27,7 @@ jobs:
                 username: ${{ secrets.NEXUS_USERNAME }}
                 password: ${{ secrets.NEXUS_PASSWORD }}
                 format: raw
-                epository: for-git-repo
+                repository: for-git-repo
                 coordinates: directory=hel
                 assets: filename=README.md
                 filename: /README.md
