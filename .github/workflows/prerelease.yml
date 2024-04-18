@@ -18,8 +18,8 @@ jobs:
             - name: Print value of M_VAR
               run : echo $M_VAR  
 
-            - name: Get data from Github context  
-              run : echo ${{ toJson(github) }}
+            - name: Command pwd
+              run : pwd
        
             - name: Upload file on Nexus
               uses: sonatype-nexus-community/nexus-repo-github-action@1.0.0
