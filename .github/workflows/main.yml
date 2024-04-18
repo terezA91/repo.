@@ -30,7 +30,7 @@ jobs:
                 repository: maven-releases
                 coordinates: groupId=dir1 artifactId=app version=1.0.0
                 assets: axtension=txt
-                filename: .github/workflows/
+                filename: .github/workflows/hel.txt
                 #assets: filename=README.md
                 #filename: README.md
             
