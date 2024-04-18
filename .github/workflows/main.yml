@@ -29,6 +29,8 @@ jobs:
                 format: maven2
                 repository: maven-releases
                 coordinates: groupId=dir1 artifactId=app version=1.0.0
-                assets: extension=txt
-                filename: ./.github/workflows/hel.txt
+                assets: axtension=txt
+                filename: .github/workflows/
+                #assets: filename=README.md
+                #filename: README.md
             
