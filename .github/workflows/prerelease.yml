@@ -33,7 +33,7 @@ jobs:
                 password   : ${{ secrets.NEXUS_PASSWORD }}
                 format     : raw
                 repository : for-git-repo
-                coordinates: directory=dev
+                coordinates: directory=dev groupId=dir1 artifactId=dir2 version=dir3
                 assets     : filename=${{ matrix.item_name }}
                 filename   : .github/workflows/${{ matrix.item_name }}
                 #assets: filename=README.
