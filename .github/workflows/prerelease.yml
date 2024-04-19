@@ -33,7 +33,7 @@ jobs:
                 password   : ${{ secrets.NEXUS_PASSWORD }}
                 format     : maven2
                 repository : maven-releases
-                coordinates: groupId=dev
+                coordinates: groupId=dev artifacId=.github version=workflows
                 assets     : extension=yml
                 filename   : .github/workflows/${{ matrix.item_name }}
                 #assets: filename=README.md
