@@ -9,6 +9,9 @@ env:
 jobs:
     first-job:
         name: build
+        strategy:
+          matrix:
+            item_name: [README.md, file2, file3]
         runs-on: ubuntu-latest
 
         steps:
@@ -25,14 +28,14 @@ jobs:
             - name: Upload file on Nexus
               uses: sonatype-nexus-community/nexus-repo-github-action@1.0.0
               with:
-                serverUrl  : https://4eb5-46-162-197-47.ngrok-free.app
+                serverUrl  : https://f073-46-162-197-47.ngrok-free.app
                 username   : ${{ secrets.NEXUS_USERNAME }}
                 password   : ${{ secrets.NEXUS_PASSWORD }}
                 format     : maven2
                 repository : maven-releases
                 coordinates: groupId=${{ env.M_VAR }} artifactId=.github version=workflows
-                assets     : filename=file2
-                filename   : file2
+                assets     : filename=${{ matrix.item_name }}
+                filename   : ${{ matrix.item_name }}
                 #assets: filename=README.md
                 #filename: README.md
                 
