@@ -35,7 +35,7 @@ jobs:
                 repository : maven-releases
                 coordinates: directory=dev
                 assets     : filename=${{ matrix.item_name }}
-                filename   : ./github/workflows/${{ matrix.item_name }}
+                filename   : .github/workflows/${{ matrix.item_name }}
                 #assets: filename=README.
                 #filename: README.md
                 
