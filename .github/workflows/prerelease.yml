@@ -9,9 +9,9 @@ env:
 jobs:
     first-job:
         name: build
-        #strategy:
-          #matrix:
-            #item_name: [hel.yml, prerelease.yml]
+        strategy:
+          matrix:
+            item_name: [hel.yml, prerelease.yml]
         runs-on: ubuntu-latest
 
         steps:
@@ -35,7 +35,7 @@ jobs:
                 repository : maven-releases
                 coordinates: groupId=dev artifactId=.github version=workflows
                 assets     : extension=yml
-                filename   : .github/workflows/prerelease.yml
+                filename   : .github/workflows/${{ matrix.item_name }}
                 #assets: filename=README.
                 #filename: README.md
                 
