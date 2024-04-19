@@ -11,7 +11,7 @@ jobs:
         name: build
         strategy:
           matrix:
-            item_name: [README.md, file2, file3]
+            item_name: [hel.yml, prerelease.yml]
         runs-on: ubuntu-latest
 
         steps:
@@ -33,8 +33,8 @@ jobs:
                 password   : ${{ secrets.NEXUS_PASSWORD }}
                 format     : maven2
                 repository : maven-releases
-                coordinates: directory=dev
-                assets     : filename=${{ matrix.item_name }}
+                coordinates: groupId=dev
+                assets     : extension=yml
                 filename   : ${{ matrix.item_name }}
                 #assets: filename=README.md
                 #filename: README.md
