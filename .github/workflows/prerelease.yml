@@ -19,23 +19,23 @@ jobs:
               uses: actions/checkout@v4.1.1 
 
             - name: Print value of M_VAR
-              run : echo $M_VAR  
+              run : ${{ matrix.item_name }}
 
             - name: Command ls
               run : |
                 ls
        
-            - name: Upload file on Nexus
-              uses: sonatype-nexus-community/nexus-repo-github-action@1.0.0
-              with:
-                serverUrl  : https://f073-46-162-197-47.ngrok-free.app
-                username   : ${{ secrets.NEXUS_USERNAME }}
-                password   : ${{ secrets.NEXUS_PASSWORD }}
-                format     : maven2
-                repository : maven-releases
-                coordinates: groupId=dev
-                assets     : extension=yml
-                filename   : ${{ matrix.item_name }}
+            #- name: Upload file on Nexus
+              #uses: sonatype-nexus-community/nexus-repo-github-action@1.0.0
+              #with:
+                #serverUrl  : https://f073-46-162-197-47.ngrok-free.app
+                #username   : ${{ secrets.NEXUS_USERNAME }}
+                #password   : ${{ secrets.NEXUS_PASSWORD }}
+                #format     : maven2
+                #repository : maven-releases
+                #coordinates: groupId=dev
+                #assets     : extension=yml
+                #filename   : ${{ matrix.item_name }}
                 #assets: filename=README.md
                 #filename: README.md
                 
