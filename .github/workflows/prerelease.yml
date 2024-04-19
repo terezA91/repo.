@@ -9,17 +9,17 @@ env:
 jobs:
     first-job:
         name: build
-        strategy:
-          matrix:
-            item_name: [hel.yml, prerelease.yml]
+        #strategy:
+          #matrix:
+            #item_name: [hel.yml, prerelease.yml]
         runs-on: ubuntu-latest
 
         steps:
             - name: Checkout
               uses: actions/checkout@v4.1.1 
 
-            - name: Print value of M_VAR
-              run : echo ${{ matrix.item_name }}
+            #- name: Print value of M_VAR
+              #run : echo ${{ matrix.item_name }}
 
             - name: Command ls
               run : |
