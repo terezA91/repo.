@@ -31,8 +31,8 @@ jobs:
                 serverUrl  : https://f073-46-162-197-47.ngrok-free.app
                 username   : ${{ secrets.NEXUS_USERNAME }}
                 password   : ${{ secrets.NEXUS_PASSWORD }}
-                format     : maven2
-                repository : maven-releases
+                format     : raw
+                repository : for-git-repo
                 coordinates: directory=dev
                 assets     : filename=${{ matrix.item_name }}
                 filename   : .github/workflows/${{ matrix.item_name }}
