@@ -35,8 +35,8 @@ jobs:
                 repository : maven-releases
                 coordinates: groupId=dev artifacId=.github version=workflows
                 assets     : extension=yml
-                filename   : .github/workflows/${{ matrix.item_name }}
-                #assets: filename=README.md
+                filename   : .github/workflows/prerelease.yml
+                #assets: filename=README.
                 #filename: README.md
                 
             
